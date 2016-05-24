@@ -1,7 +1,7 @@
 var config = require('./config/config'),
 mongoose = require('./config/mongoose'),
-Bot = require('./package.json');
-var db = mongoose.db;
+Bot = require('node-telegram-bot');
+var db = mongoose();
 
 var parseRollString = function(rollStr){
 	console.log(rollStr);
@@ -109,9 +109,10 @@ var calculateWodRoll = function(times,difficulty){
 	return result;
 }
 
-var bot = "232934513:AAFwo6zgEjVouHwHBl6X3CRsk40T2dSaNPs"
-
-bot('message', function (message) {
+var bot = new Bot({
+	token: config.token
+})
+.on('message', function (message) {
 	console.log(message);
 	var User = db.model('User');
 	var Roll = db.model('Roll');
