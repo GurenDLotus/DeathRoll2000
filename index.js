@@ -1,7 +1,7 @@
 var config = require('./config/config'),
 mongoose = require('./config/mongoose'),
 Bot = require('./package.json');
-var db = mongoose();
+var db = mongoose.db;
 
 var parseRollString = function(rollStr){
 	console.log(rollStr);
