@@ -109,9 +109,9 @@ var calculateWodRoll = function(times,difficulty){
 	return result;
 }
 
-var bot = '232934513:AAFwo6zgEjVouHwHBl6X3CRsk40T2dSaNPs'
+var bot = "232934513:AAFwo6zgEjVouHwHBl6X3CRsk40T2dSaNPs"
 
-.on('message', function (message) {
+bot.on('message', function (message) {
 	console.log(message);
 	var User = db.model('User');
 	var Roll = db.model('Roll');
