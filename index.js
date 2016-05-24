@@ -1,6 +1,6 @@
 var config = require('./config/config'),
 mongoose = require('./config/mongoose'),
-Bot = require('node-telegram-bot-master');
+Bot = require('node-telegram-dice-bot');
 var db = mongoose();
 
 var parseRollString = function(rollStr){
