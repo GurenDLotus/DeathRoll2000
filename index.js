@@ -109,7 +109,7 @@ var calculateWodRoll = function(times,difficulty){
 	return result;
 }
 
-var bot = token: config.token
+var bot = config.token
 
 .on('message', function (message) {
 	console.log(message);
